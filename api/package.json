@@ -20,6 +20,7 @@
     "graphql": "14.3.0",
     "jsonwebtoken": "8.5.1",
     "lowdb": "1.0.0",
+    "now": "^15.8.7",
     "uuid": "3.3.2"
   },
   "devDependencies": {
