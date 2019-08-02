@@ -9,12 +9,9 @@ import { Detail } from "./pages/Detail";
 import { Favs } from "./pages/Favs";
 import { User } from "./pages/User";
 import { NotRegisteredUser } from "./pages/NotRegisteredUser";
+import Context from "./Context";
 
 import { GlobalStyle } from "./styles/GlobalStyles";
-
-const UserLogged = ({ children }) => {
-  return children({ isAuth: true });
-};
 
 export const App = () => {
   return (
@@ -26,7 +23,7 @@ export const App = () => {
         <Home path="/pet/:id" />
         <Detail path="/detail/:detailId" />
       </Router>
-      <UserLogged>
+      <Context.Consumer>
         {({ isAuth }) =>
           isAuth ? (
             <Router>
@@ -40,7 +37,7 @@ export const App = () => {
             </Router>
           )
         }
-      </UserLogged>
+      </Context.Consumer>
       <NavBar />
     </div>
   );
