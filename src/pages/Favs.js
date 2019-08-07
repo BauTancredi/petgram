@@ -1,9 +1,14 @@
 import React, { Fragment } from "react";
 import { FavsWithQuery } from "../container/GetFavorites";
+import { Helmet } from "react-helmet";
+import { Layout } from "../components/Layout";
 
 export const Favs = () => (
-  <Fragment>
-    <h1>Esto es Favs</h1>
+  <Layout
+    title="Tus favoritos"
+    subtitle="Aquí puedes encontrar
+  tus favoritos"
+  >
     <FavsWithQuery />
-  </Fragment>
+  </Layout>
 );
